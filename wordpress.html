@@ -34,7 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* Enhanced magical particles */
         body::before {
             content: '';
             position: fixed;
@@ -65,7 +64,6 @@
             z-index: 2;
         }
 
-        /* Enhanced Header */
         .header {
             background: linear-gradient(135deg, var(--dark-brown) 0%, var(--light-brown) 100%);
             border: 4px solid var(--primary-gold);
@@ -117,7 +115,6 @@
             text-shadow: 1px 1px 3px #000;
         }
 
-        /* Enhanced House Navigation */
         .houses {
             display: flex;
             justify-content: center;
@@ -202,7 +199,6 @@
             transform: translateY(-5px);
         }
 
-        /* Enhanced Main Content */
         .content {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -210,7 +206,6 @@
             margin-bottom: 40px;
         }
 
-        /* Enhanced Spell Cards */
         .spell-card {
             background: linear-gradient(135deg, var(--card-dark) 0%, var(--card-light) 100%);
             border: 3px solid var(--info-blue);
@@ -253,7 +248,6 @@
             font-size: 1.1rem;
         }
 
-        /* Enhanced Progress Bars */
         .progress {
             background: rgba(0, 0, 0, 0.3);
             border-radius: 15px;
@@ -285,7 +279,6 @@
             100% { transform: translateX(100%); }
         }
 
-        /* Enhanced Sidebar */
         .sidebar {
             background: linear-gradient(135deg, var(--card-dark) 0%, var(--card-light) 100%);
             border: 3px solid var(--danger-red);
@@ -305,7 +298,6 @@
             text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
         }
 
-        /* Enhanced Magic Buttons */
         .magic-btn {
             background: linear-gradient(135deg, var(--purple-magic) 0%, #8e44ad 100%);
             color: white;
@@ -332,7 +324,6 @@
             transform: translateY(-1px);
         }
 
-        /* Enhanced Footer */
         .footer {
             background: linear-gradient(135deg, var(--dark-brown) 0%, var(--light-brown) 100%);
             border: 3px solid var(--primary-gold);
@@ -343,7 +334,6 @@
             box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
         }
 
-        /* Enhanced Responsive Design */
         @media (max-width: 768px) {
             .content { grid-template-columns: 1fr; }
             .houses { flex-direction: column; align-items: center; }
@@ -352,7 +342,7 @@
             .spell-card { padding: 25px; }
         }
 
-        /* Enhanced Animations */
+        /* Animations */
         .fade-in { animation: fadeIn 1.2s ease-in; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(40px); }
@@ -365,7 +355,7 @@
             50% { transform: translateY(-15px); }
         }
 
-        /* Enhanced Notification System */
+        /* Notification System */
         .notification {
             position: fixed;
             top: 30px;
@@ -395,13 +385,11 @@
 </head>
 <body>
     <div class="container">
-        <!-- Enhanced Hogwarts Header -->
         <header class="header fade-in">
-            <h1>�� Hogwarts HONEYPY</h1>
+            <h1>Hogwarts HONEYPY</h1>
             <p>"The Chamber of Cybersecurity Secrets"</p>
         </header>
 
-        <!-- Enhanced House Navigation -->
         <nav class="houses fade-in">
             <button class="house-btn gryffindor" onclick="switchHouse('gryffindor')">�� Gryffindor</button>
             <button class="house-btn slytherin" onclick="switchHouse('slytherin')">🐍 Slytherin</button>
@@ -440,7 +428,6 @@
                     <p style="font-size: 1rem; color: var(--text-muted);">78% network illuminated - Clear visibility maintained!</p>
                 </div>
 
-                <!-- Enhanced Control Panel -->
                 <div style="margin-top: 40px; text-align: center;">
                     <button class="magic-btn" onclick="refreshData()">🔄 Refresh Spells</button>
                     <button class="magic-btn" onclick="exportReport()">📜 Export Scroll</button>
@@ -448,7 +435,6 @@
                 </div>
             </main>
 
-            <!-- Right Column - Enhanced Sidebar -->
             <aside class="sidebar fade-in">
                 <h3>✨ Magical Statistics</h3>
                 
@@ -480,19 +466,15 @@
             </aside>
         </div>
 
-        <!-- Enhanced Footer -->
         <footer class="footer fade-in">
             <p>© 2024 Hogwarts HONEYPY | "Wingardium Cyberiosa!" - Protecting the digital realm with ancient magic</p>
         </footer>
     </div>
 
-    <script>
-        // Enhanced Magical JavaScript functionality
-        
+    <script>        
         let currentHouse = 'gryffindor';
         let alertStatus = true;
 
-        // Enhanced House switching functionality
         function switchHouse(house) {
             currentHouse = house;
             document.querySelectorAll('.house-btn').forEach(btn => {
@@ -502,7 +484,6 @@
             event.target.style.transform = 'scale(1.05)';
             event.target.style.boxShadow = '0 0 40px currentColor';
             
-            // Update theme based on house
             updateHouseTheme(house);
         }
 
@@ -519,7 +500,6 @@
             document.documentElement.style.setProperty('--house-secondary', theme.secondary);
         }
 
-        // Enhanced Spell casting functionality
         function castSpell(spell) {
             const card = event.currentTarget;
             card.style.transform = 'scale(0.98)';
@@ -530,7 +510,6 @@
                 card.style.boxShadow = '0 15px 35px rgba(52, 152, 219, 0.5)';
             }, 400);
 
-            // Enhanced spell effects
             const spells = {
                 protego: '🛡️ Protego Maxima cast! Enhanced protection activated. Your shield is impenetrable!',
                 expelliarmus: '⚡ Expelliarmus Cyber! Malicious connections disarmed. The dark forces are repelled!',
@@ -540,7 +519,7 @@
             showNotification(spells[spell]);
         }
 
-        // Enhanced Data refresh functionality
+        //  Data refresh 
         function refreshData() {
             const button = event.target;
             button.innerHTML = '⏳ Casting...';
@@ -554,12 +533,12 @@
             }, 2500);
         }
 
-        // Enhanced Export functionality
+        // Export functionality
         function exportReport() {
             showNotification('📜 Magical scroll exported to your spellbook! The ancient knowledge is preserved.');
         }
 
-        // Enhanced Alert toggle functionality
+        // Alert toggle functionality
         function toggleAlerts() {
             alertStatus = !alertStatus;
             const button = event.target;
@@ -575,12 +554,12 @@
             }
         }
 
-        // Enhanced Update statistics
+        // Update statistics
         function updateStats() {
             const now = new Date();
             document.getElementById('lastUpdate').innerHTML = now.toLocaleTimeString();
             
-            // Enhanced dynamic stats
+            // dynamic stats
             const attackCount = Math.floor(Math.random() * 500) + 1000;
             const uniqueIPs = Math.floor(Math.random() * 200) + 800;
             const credentials = Math.floor(Math.random() * 1000) + 3000;
@@ -590,7 +569,6 @@
             document.getElementById('credentials').innerHTML = `${credentials} attempts blocked`;
         }
 
-        // Enhanced Notification system
         function showNotification(message) {
             const notification = document.createElement('div');
             notification.className = 'notification';
@@ -603,10 +581,7 @@
             }, 4000);
         }
 
-        // Enhanced Auto-refresh functionality
         setInterval(updateStats, 12000);
-
-        // Enhanced Keyboard shortcuts
         document.addEventListener('keydown', function(e) {
             if (e.ctrlKey && e.key === 'r') {
                 e.preventDefault();
@@ -627,4 +602,5 @@
         console.log('🏰 Enhanced Hogwarts HONEYPY Dashboard loaded successfully!');
     </script>
 </body>
+
 </html>
