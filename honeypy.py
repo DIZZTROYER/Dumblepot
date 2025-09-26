@@ -3,7 +3,6 @@
 import argparse
 from ssh_honeypot import *
 
-
 #Parse Arguements
 
 if __name__ == "__main__":
@@ -37,4 +36,5 @@ if __name__ == "__main__":
             print("[-] Choose a honeypot type (SSH --ssh) or (HTTP --http). ")
 
     except:
+
         print("\n Exiting HONEYPY... ")
